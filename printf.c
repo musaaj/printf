@@ -1,15 +1,18 @@
 #include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
 /**
+ * _printf - print formated string to stdin
+ * @s: sting format specifier
+ * Return: int number of chars printed
  */
 int _printf(const char *s, ...)
 {
-	int i = 0, j = 0;
-	char c;
-	char *str;
+	int i = 0, printed = 0;
+	char c, *str;
 	va_list args;
 
+	if (s == NULL)
+		return (-1);
 	va_start(args, s);
 	while (s[i] != EOF)
 	{
@@ -20,38 +23,21 @@ int _printf(const char *s, ...)
 			{
 				i++;
 				c = (char) va_arg(args, int);
-				write(1, &c, 1);
+				_putchar(c);
 			}
 			if (s[i] == 's')
 			{
 				i++;
 				str = va_arg(args, char*);
-				while (str[j] != EOF)
-				{
-					write(1, &str[j], 1);
-					j++;
-				}
-				j = 0;
+				printed += _puts(str);
 			}
-			/*if ((s[i] == 'd') || (s[i] == 'i'))
-			{
-				_strcpy(str, _atoi(va_arg(args, int));
-				j = 0;
-				while (str[j] != EOF)
-				{
-					write(1, &str[j], 1);
-
-				}
-				j = 0;
-				free(str);
-			}*/
 			if (s[i] == '%')
 			{
-				write(1, &s[i], 1);
+				_putchar(s[i]);
 				i++;
 			}
 		}
-		write(1, &s[i], 1);
+		_putchar(s[i]);
 		i++;
 	}
 	va_end(args);
