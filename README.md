@@ -90,7 +90,7 @@ int main()
 
 {
 
-	_printf("Hello world, I'm a %s", "Bello");
+	_printf("Hello world, I'm %s", "Saida");
 
 	return (0);
 
@@ -98,7 +98,7 @@ int main()
 
 ```
 
-`Hello world, I'm a Bello`
+`Hello world, I'm Saida`
 
 
 
@@ -112,7 +112,7 @@ int main()
 
 {
 
-	_printf("%S\n", "Best\nSchool!");
+	_printf("%S\n", "Alx\nSchool!");
 
 	return (0);
 
@@ -120,7 +120,7 @@ int main()
 
 ```
 
-`Best\x0ASchool!`
+`Alx\x0ASchool!`
 
 
 
