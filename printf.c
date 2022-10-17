@@ -33,18 +33,7 @@ int _printf(const char *s, ...)
 				}
 				j = 0;
 			}
-			/*if ((s[i] == 'd') || (s[i] == 'i'))
-			{
-				_strcpy(str, _atoi(va_arg(args, int));
-				j = 0;
-				while (str[j] != EOF)
-				{
-					write(1, &str[j], 1);
 
-				}
-				j = 0;
-				free(str);
-			}*/
 			if (s[i] == '%')
 			{
 				write(1, &s[i], 1);
