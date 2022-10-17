@@ -14,7 +14,7 @@
 
 
 
-The format string is a character string, is composed
+The format string should be a character array constant
 
 of zero or more directives
 
