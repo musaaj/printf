@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * _printf - print formated string to stdin
  * @s: sting format specifier
@@ -31,6 +32,13 @@ int _printf(const char *format, ...)
 				i++;
 				str = va_arg(args, char*);
 				printed += _puts(str);
+			}
+			if ((format[i] == 'd') (format[i] == 'i'))
+			{
+				i++;
+				str = intstr(va_arg(args, int));
+				printed += putnum(str);
+				free(str);
 			}
 		}
 		_putchar(format[i]);
