@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				str = va_arg(args, char*);
 				printed += _puts(str);
 			}
-			if ((format[i] == 'd') (format[i] == 'i'))
+			if ((format[i] == 'd') || (format[i] == 'i'))
 			{
 				i++;
 				str = intstr(va_arg(args, int));
