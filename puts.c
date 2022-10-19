@@ -10,6 +10,6 @@ int _puts(char *str)
 {
 	int printed = _strlen(str);
 
-	write(1, str, printed)
+	write(1, str, printed);
 	return (printed);
 }
