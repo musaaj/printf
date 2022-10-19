@@ -1,5 +1,4 @@
 #include "main.h"
-#include "strlen.c"
 #include <unistd.h>
 /**
  * _puts - print string to stdin
@@ -10,6 +9,6 @@ int _puts(char *str)
 {
 	int printed = _strlen(str);
 
-	write(1, &str, printed);
+	write(1, str, printed);
 	return (printed);
 }
